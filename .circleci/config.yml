@@ -14,11 +14,10 @@ jobs:
             npm run test
 
 workflows:
-  version: 2
-  test_app:
+  setup_and_test:
     jobs:
       - test:
           filters:
             branches:
               only:
-                - main
+                - master
