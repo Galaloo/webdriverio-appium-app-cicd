@@ -5,11 +5,14 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Change to Correct Directory
-          command: cd android
+          name: Debug Pause
+          command: sleep 5  # Waits for 30 seconds
       - run:
           name: List the directory
-          command: ls   
+          command: ls -la
+      - run:
+          name: Change to Correct Directory
+          command: cd android  
       - run:
           name: Install Dependencies
           command: npm install
