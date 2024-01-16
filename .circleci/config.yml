@@ -1,18 +1,21 @@
 version: 2.1
 jobs:
-  build:
+  test:
     machine: true
+    filters:
+      branches:
+        only:
+          - main
     steps:
       - checkout
       - run:
           name: Install Dependencies and Run Tests in Android Directory
           command: |
             cd android
-            ls -la  # Optional: List directory contents to verify
             npm install
             npm run test
 workflows:
   version: 2
-  build:
+  test_app:
     jobs:
-      - build
+      - test
