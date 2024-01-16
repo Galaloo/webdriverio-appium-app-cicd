@@ -9,7 +9,6 @@ jobs:
           name: Install Dependencies and Run Tests in Android Directory
           command: |
             cd android
-            ls -la  # Optional: List directory contents to verify
             npm install
             npm run test
 
