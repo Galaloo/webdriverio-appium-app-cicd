@@ -5,12 +5,6 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Debug Pause
-          command: sleep 5  # Waits for 5 seconds
-      - run:
-          name: List the directory
-          command: ls -la
-      - run:
           name: Install Dependencies and Run Tests in Android Directory
           command: |
             cd android
