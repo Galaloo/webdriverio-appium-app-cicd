@@ -6,7 +6,7 @@ jobs:
       - checkout
       - run:
           name: Change to Correct Directory
-          command: cd android/examples
+          command: cd android
       - run:
           name: Install Dependencies
           command: npm install
