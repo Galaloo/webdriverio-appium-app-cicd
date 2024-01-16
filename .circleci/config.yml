@@ -6,19 +6,17 @@ jobs:
       - checkout
       - run:
           name: Debug Pause
-          command: sleep 5  # Waits for 30 seconds
+          command: sleep 5  # Waits for 5 seconds
       - run:
           name: List the directory
           command: ls -la
       - run:
-          name: Change to Correct Directory
-          command: cd android  
-      - run:
-          name: Install Dependencies
-          command: npm install
-      - run:
-          name: Run WebdriverIO Appium Tests on BrowserStack
-          command: npm run test
+          name: Install Dependencies and Run Tests in Android Directory
+          command: |
+            cd android
+            ls -la  # Optional: List directory contents to verify
+            npm install
+            npm run test
 workflows:
   version: 2
   build:
