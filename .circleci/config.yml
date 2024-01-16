@@ -8,6 +8,9 @@ jobs:
           name: Change to Correct Directory
           command: cd android
       - run:
+          name: List the directory
+          command: ls   
+      - run:
           name: Install Dependencies
           command: npm install
       - run:
