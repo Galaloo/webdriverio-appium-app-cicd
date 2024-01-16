@@ -21,12 +21,14 @@ exports.config = {
       deviceName: 'Google Pixel 3',
       osVersion: "9.0"
     }
-  }, {
-    'bstack:options': {
-      deviceName: 'Samsung Galaxy S10e',
-      osVersion: "9.0"
-    }
-  }],
+  }
+    // , {
+    // 'bstack:options': {
+    //   deviceName: 'Samsung Galaxy S10e',
+    //   osVersion: "9.0"
+    // }
+    // }
+  ],
 
   commonCapabilities: {
     'bstack:options': {
@@ -63,7 +65,7 @@ exports.config = {
 };
 
 // Code to support common capabilities
-exports.config.capabilities.forEach(function(caps){
-  for(let key in exports.config.commonCapabilities) 
-    caps[key] = { ...caps[key], ...exports.config.commonCapabilities[key]};
+exports.config.capabilities.forEach(function (caps) {
+  for (let key in exports.config.commonCapabilities)
+    caps[key] = { ...caps[key], ...exports.config.commonCapabilities[key] };
 });
