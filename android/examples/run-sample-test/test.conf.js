@@ -1,3 +1,4 @@
+// Small change to trigger circleci
 exports.config = {
   user: process.env.BROWSERSTACK_USERNAME || 'BROWSERSTACK_USERNAME',
   key: process.env.BROWSERSTACK_ACCESS_KEY || 'BROWSERSTACK_ACCESS_KEY',
@@ -21,13 +22,12 @@ exports.config = {
       deviceName: 'Google Pixel 3',
       osVersion: "9.0"
     }
+  }, {
+    'bstack:options': {
+      deviceName: 'Samsung Galaxy S10e',
+      osVersion: "9.0"
+    }
   }
-    // , {
-    // 'bstack:options': {
-    //   deviceName: 'Samsung Galaxy S10e',
-    //   osVersion: "9.0"
-    // }
-    // }
   ],
 
   commonCapabilities: {
